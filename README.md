@@ -4,9 +4,7 @@
 
 This repo is fully based on https://github.com/SBCGames/Spriter-Player-for-Phaser, so please star it as well :) The original repo is for Phaser2, so I've made some changes to make it work with Phaser3. My repo won't support Phaser2!
 
-You can play with it too, but please note, that it contains one paid animation from https://www.gamedeveloperstudio.com.
-I got permission to share it here, so please check their official site for more. They have a lot of cool animations for
-your games.
+You can play with it too, Please note that it contains one paid animation from https://gamedeveloperstudio.com. I got permission to share it here, and you can use it to test the runtime and for personal use. Please check the official site if you wish to use the sprite commercially, they have a lot of cool animations for your games.
 
 All you probably need - is spriterPlayerLib folder. It contains files from original repo, but with some changes to make
 it work with Phaser3. Please note, that I've made some changes to SpriterContainer API, so you can check original repo
@@ -14,8 +12,8 @@ for some differences. Fell free to update any files in spriterPlayerLib folder f
 
 You can just copy-paste spriterPlayerLib in your project to make it work for you
 
-BONUS: Please check my SpriterAnimation class. This is a wrapper for original repo, that allows you work with animations
-very easy, and it contains some new features like ```playAnimationQueue```
+```BONUS```: Please check my SpriterAnimation class. This is a wrapper for original repo, that allows you work with animations
+very easy, and it contains some new features like ```playAnimationQueue``` and ```changeCharacter```
 
 ## Here's how do I use it in my project:
 
