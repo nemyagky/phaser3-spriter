@@ -1,19 +1,20 @@
-![img.png](img.png)
+# Render your animations created in Spriter using Phaser3 and TypeScript
 
-```This repo - my playground for experiments with Phaser3 Spriter Animations```. You can also find a good architecture for your game here. Architecture is still prototype, but so far it's very good in my opinion.
+Demo available here: https://phaser3-spriter.vercel.app/ (animation size is 9MB, wait a second)
 
-This repo is fully based on https://github.com/SBCGames/Spriter-Player-for-Phaser, so please star it as well :) The original repo is for Phaser2, so I've made some changes to make it work with Phaser3. My repo won't support Phaser2!
 
-You can play with it too, Please note that it contains one paid animation from https://gamedeveloperstudio.com. I got permission to share it here, and you can use it to test the runtime and for personal use. Please check the official site if you wish to use the sprite commercially, they have a lot of cool animations for your games.
+There's bones support, I've implemented support for multiple characters, playing animations queue, etc. In general, it should be able to render animations of any complexity. You can check demo, I've added one complex animation there
 
-All you probably need - is spriterPlayerLib folder. It contains files from original repo, but with some changes to make
-it work with Phaser3. Please note, that I've made some changes to SpriterContainer API, so you can check original repo
-for some differences. Fell free to update any files in spriterPlayerLib folder for your needs.
+This repository is a wrapper for https://github.com/SBCGames/Spriter-Player-for-Phaser, so please star it as well :) The original repo is for Phaser2, I've made changes to make it work with Phaser3. My repo won't support Phaser2!
 
-You can just copy-paste spriterPlayerLib in your project to make it work for you
+I've also implemented a SpriterAnimation class, which makes it very easy to work with animations, so please check it as well. Actually, this repo - my playground for experiments with Phaser3 Spriter Animations, so you can also find a good architecture for your game here.
 
-```BONUS```: Please check my SpriterAnimation class. This is a wrapper for original repo, that allows you work with animations
-very easy, and it contains some new features like ```playAnimationQueue``` and ```changeCharacter```
+Please note, that demo contains one paid animation from https://gamedeveloperstudio.com. I got permission to share it here, and you can use it to test the runtime and for personal use. Please check the official site if you wish to use the sprite commercially, they have a lot of cool animations for your games.
+
+
+# How to use
+You can just copy-paste spriterPlayerLib in your project to make it work for you. It contains files from original repo + my updates. Fell free to update any files in spriterPlayerLib folder for your needs.
+
 
 ## Here's how do I use it in my project:
 
@@ -42,7 +43,7 @@ store.animations.preloadAllAnimations();
 private preloadAnimation(animationFile: IAnimationFile) {
     const scene = useScene();
 
-    scene.load.setPath(`./../../../animations/${animationFile.folderName}`);
+    scene.load.setPath(`${ANIMATIONS_PATH}${animationFile.folderName}`);
 
     scene.load.atlas(`${animationFile.animationName}Atlas`, `${animationFile.fileName}.png`, `${animationFile.fileName}.json`);
     scene.load.xml(`${animationFile.animationName}Xml`, `${animationFile.fileName}.xml`);
@@ -75,6 +76,10 @@ plant.playAnimationsQueue([
     {
         animationName: "attack",
         repeat: 2
+    },
+    {
+        animationName: "die",
+        loop: false,
     }
 ])
 ```

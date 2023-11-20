@@ -25,5 +25,4 @@
     "renderer",
     "node_modules/phaser/types",
   ],
-  "references": [{ "path": "./tsconfig.node.json"}]
 }

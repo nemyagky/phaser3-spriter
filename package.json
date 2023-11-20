@@ -5,14 +5,12 @@
   "type": "module",
   "scripts": {
     "vite:dev": "vite",
-    "vite:build": "tsc && vite build"
+    "vite:build": "vite build"
   },
   "dependencies": {
-    "@emotion/styled": "^11.11.0",
     "phaser": "^3.60.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "uuid": "^9.0.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

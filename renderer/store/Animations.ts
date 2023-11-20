@@ -1,4 +1,4 @@
-import {ALL_ANIMATIONS, IAnimationFile} from "../constants/animations";
+import {ALL_ANIMATIONS, ANIMATIONS_PATH, IAnimationFile} from "../constants/animations";
 import {useScene} from "../hooks/useScene";
 import * as Spriter from "../engine/spriterPlayerLib";
 
@@ -16,7 +16,7 @@ export class Animations {
   private preloadAnimation(animationFile: IAnimationFile) {
     const scene = useScene();
 
-    scene.load.setPath(`./../../../animations/${animationFile.folderName}`);
+    scene.load.setPath(`${ANIMATIONS_PATH}/${animationFile.folderName}`);
 
     scene.load.atlas(`${animationFile.animationName}Atlas`, `${animationFile.fileName}.png`, `${animationFile.fileName}.json`);
     scene.load.xml(`${animationFile.animationName}Xml`, `${animationFile.fileName}.xml`);

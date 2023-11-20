@@ -1,3 +1,6 @@
+export const ANIMATIONS_PATH = '/animations';
+
+
 export interface IAnimationFile {
   animationName: string;
   folderName: string;
